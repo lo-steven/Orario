@@ -1,0 +1,91 @@
+:root {
+  --bg-dark: #151413;
+  --surface-light: #f9f9f9;
+  --accent-blue: #57B6D4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--bg-dark);
+  color: var(--bg-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.schedule-wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: calc(20px + env(safe-area-inset-top)) 14px calc(32px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day-card {
+  width: 100%;
+  background-color: var(--surface-light);
+  border: 1.5px solid var(--bg-dark);
+}
+
+.day-header {
+  background-color: var(--accent-blue);
+  color: var(--bg-dark);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 8px 12px;
+  border-bottom: 1.5px solid var(--bg-dark);
+}
+
+.day-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: var(--surface-light);
+}
+
+.day-table td {
+  border-bottom: 1.5px solid var(--bg-dark);
+  color: var(--bg-dark);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  padding: 13px 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.day-table tr:last-child td {
+  border-bottom: none;
+}
+
+.hour-col {
+  width: 46px;
+  text-align: center;
+  border-right: 1.5px solid var(--bg-dark);
+}
+
+.teacher-col {
+  width: 46%;
+  text-align: left;
+  padding-left: 16px !important;
+}
+
+.subject-col {
+  width: auto;
+  text-align: left;
+  padding-left: 10px !important;
+}
